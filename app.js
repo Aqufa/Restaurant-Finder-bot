@@ -21,7 +21,7 @@ bot.on('text', ctx => {
   });
 
 //bot.launch();
-const bot = new Composer
+module.exports = bot
 
 
 
