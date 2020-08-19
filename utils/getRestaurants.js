@@ -2,7 +2,7 @@ const request = require('request');
 const axios = require('axios');
 
 const getRestaurants = (address ,callback) =>{
-    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=pk.eyJ1IjoiYXF1aWI0NTYiLCJhIjoiY2tkdG54dGM5MDVjMzJybno4czI3bXptbSJ9.svK5JpvP8wtOGR0JmSxkWg&limit=1`;
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=Api_key&limit=1`;
     request({url, json:true}, (error, response) =>{
         if(error){
             return callback('Please check your connectivity', undefined);
@@ -18,7 +18,7 @@ const getRestaurants = (address ,callback) =>{
                 method: "GET",
                 url: `https://developers.zomato.com/api/v2.1/geocode?lat=${latitude}&lon=${longitude}`,
                 headers: {
-                  "user-key": "e817e176add64cb95a322155317ba478",
+                  "user-key": "Api_key",
                   "content-type": "application/json"
                 }
               })
