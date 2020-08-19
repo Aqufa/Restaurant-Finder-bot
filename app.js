@@ -5,7 +5,7 @@ const request = require('request');
 const getRestaurants = require('./utils/getRestaurants');
 
 
-const bot = new Telegraf('Bot_token');
+const bot = new Telegraf('1233420128:AAHliiaWVLSev3N41YW__l4Y8KPvcVP25U8');
 //const bot = new Composer;
 
 
