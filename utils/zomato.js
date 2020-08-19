@@ -9,7 +9,15 @@ axios({
     }
   })
     .then(response => {
-      console.log(response.data.link);
+      const resList = response.data.nearby_restaurants;
+      resList.forEach(dhaba =>{
+        const name = dhaba.restaurant.name;
+        const locate= dhaba.restaurant.location.address;
+
+       const menuLink =  dhaba.restaurant.menu_url;
+       console.log('Name: '+ name + '\nLocation: '+locate+ '\nmenu-Link: '+menuLink)
+      })
+      //console.log(response.data.nearby_restaurants);
     })
     .catch(error => {
       console.log(error);

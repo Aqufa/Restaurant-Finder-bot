@@ -23,10 +23,15 @@ const getRestaurants = (address ,callback) =>{
                 }
               })
                 .then(response => {
-                  callback(undefined, response.data.link);
+                  const resList = response.data.nearby_restaurants;
+                  resList.forEach(dhaba =>{
+                  const name = dhaba.restaurant.name;
+                  const locate= dhaba.restaurant.location.address;
+
+                  const menuLink =  dhaba.restaurant.menu_url;
+                  callback(undefined, {name, locate, menuLink});
                 })
-                .catch(error => {
-                  callback(error, undefined);
+                
                 });
         }
     })
