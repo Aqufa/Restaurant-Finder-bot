@@ -15,7 +15,9 @@ axios({
         const locate= dhaba.restaurant.location.address;
 
        const menuLink =  dhaba.restaurant.menu_url;
-       console.log('Name: '+ name + '\nLocation: '+locate+ '\nmenu-Link: '+menuLink)
+       const rating = dhaba.restaurant.user_rating.aggregate_rating
+       console.log('Name: '+ name + '\nLocation: '+locate+ '\nmenu-Link: '+menuLink+ '\n\nRating: ' +rating)
+       
       })
       //console.log(response.data.nearby_restaurants);
     })

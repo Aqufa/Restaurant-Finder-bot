@@ -27,9 +27,10 @@ const getRestaurants = (address ,callback) =>{
                   resList.forEach(dhaba =>{
                   const name = dhaba.restaurant.name;
                   const locate= dhaba.restaurant.location.address;
+                  const rating = dhaba.restaurant.user_rating.aggregate_rating;
 
                   const menuLink =  dhaba.restaurant.menu_url;
-                  callback(undefined, {name, locate, menuLink});
+                  callback(undefined, {name, locate, menuLink, rating});
                 })
                 
                 });

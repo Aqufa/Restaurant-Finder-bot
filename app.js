@@ -22,7 +22,7 @@ bot.on('text', ctx => {
       if(error){
         return ctx.reply('Sorry this loction is not in my directory!! Please try another one')
       }
-        ctx.reply('Name: '+ data.name + '\n\nLocation: '+data.locate+ '\n\nMenu-link: '+data.menuLink)
+        ctx.reply('Name: '+ data.name + '\n\nLocation: '+data.locate+ '\n\nRating: '+data.rating+ '\n\nMenu-link: '+data.menuLink)
     })
   });
 
